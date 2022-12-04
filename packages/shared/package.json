@@ -1,0 +1,19 @@
+{
+  "name": "@monorepo/shared",
+  "version": "1.0.0",
+  "description": "shared",
+  "main": "src/index.ts",
+  "module": "src/index.js",
+  "scripts": {
+    "build:esm": "tsc --module esnext --target es6 --outDir ./es"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.6"
+  }
+}

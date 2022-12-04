@@ -1,0 +1,17 @@
+{
+    "$schema": "https://turbo.build/schema.json",
+    "pipeline": {
+        "build:dev": {
+            "dependsOn": ["^build:dev"],
+            "outputs": ["lib/**", "es/**"]
+        },
+        "build:cjs": {
+            "dependsOn": ["^build:dev"],
+            "outputs": ["lib/**"]
+        },
+        "build:esm": {
+            "dependsOn": ["^build:dev"],
+            "outputs": ["es/**"]
+        }
+    }
+}

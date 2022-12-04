@@ -1,0 +1,32 @@
+{
+  "name": "monorepo",
+  "version": "1.0.0",
+  "description": "monorepo",
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run tsc",
+    "build": "turbo run build --filter=./packages/*",
+    "build:cjs": "turbo run build:cjs --filter=./packages/*",
+    "build:esm": "turbo run build:esm --filter=./packages/* --no-daemon",
+    "build:dev": "turbo run build:dev --filter=./packages/*"
+  },
+  "rss": {
+    "build:dev": "pnpm run --if-present build:less && run-p -s build:cjs build:esm",
+    "build:cjs": "tsc --module commonjs --target es6 --outDir ./lib",
+    "build:esm": "tsc --module esnext --target es6 --outDir ./es"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.9.3"
+  },
+  "devDependencies": {
+    "jasmine-core": "^4.5.0",
+    "karma": "^6.4.1",
+    "karma-chrome-launcher": "^3.1.1",
+    "karma-jasmine": "^5.1.0",
+    "turbo": "^1.6.3",
+    "vite": "^3.2.4"
+  }
+}

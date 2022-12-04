@@ -1,0 +1,16 @@
+{
+  "name": "@monorepo/docs",
+  "version": "1.0.0",
+  "description": "docs",
+  "main": "src/index.ts",
+  "module": "src/index.js",
+  "scripts": {
+    "build:esm": "tsc --module esnext --target es6 --outDir ./es"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@monorepo/shared": "workspace:*"
+  }
+}
