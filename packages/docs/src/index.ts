@@ -1,17 +1,17 @@
-import { isArray } from 'shared'
+import { isArray } from '@monorepo/shared'
 
-export function concat(arr1: any[], arr2: any[]) {
-    if (isArray(arr1) && isArray(arr2)) {
-        return arr1.concat(arr2)
-    } else {
-        return []
-    }
+export function concat<T>(arr1: T[], arr2: T[]) {
+  if (isArray(arr1) && isArray(arr2)) {
+    return arr1.concat(arr2)
+  } else {
+    return []
+  }
 }
 
 export function toUpper(str: string) {
-    return str.toLocaleUpperCase()
+  return str.toLocaleUpperCase()
 }
 
-export function isString(value: any) {
-    return typeof value === 'string'
+export function isString<T>(value: T) {
+  return typeof value === 'string'
 }

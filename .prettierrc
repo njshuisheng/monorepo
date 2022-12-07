@@ -1,0 +1,10 @@
+{
+  "semi": false,
+  "singleQuote": true,
+  "printWidth": 80,
+  "trailingComma": "none",
+  "proseWrap": "never",
+  "endOfLine": "auto",
+  "useTabs": false,
+  "overrides": [{ "files": ".prettierrc", "options": { "parser": "json" } }]
+}

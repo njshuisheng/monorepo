@@ -1,5 +1,6 @@
 .vscode
 .turbo
+.eslintcache
 es
 lib
 dist
